@@ -1,0 +1,566 @@
+Endpoint: Atualiza um paciente
+- Método: 
+- URL: 
+- Parâmetros: 
+    - sem parâmetros 
+- Resposta: 
+    -Sucesso (): {
+    "code": ,
+    "message": ,
+}
+        - Erro (): {
+    "code": ,
+    "message": ,
+}
+
+
+
+
+
+
+Endpoint: Cadastra novo paciente
+- Método: POST
+- URL: pacientes/
+- Parâmetros:
+    - sem parâmetros
+- Corpo da requisição: {
+    "id": 1,
+    "nome": "Marcelo Fernando da Silva",
+    "data_nascimento": ,
+    "cpf": "10000000000",
+    "telefone": "31990000000",
+    "logradouro": "Rua Paulo de Oliveira Santos",
+    "numero": 554,
+    "bairro": "Tirol (Barreiro)",
+    "cidade": "Belo Horizonte"
+}
+- Resposta: 
+    - Sucesso (201): {
+    "code": 201,
+    "message": "Paciente cadastrado com sucesso",
+    "data": {
+        "id": 1,
+        "nome": "Marcelo Fernando da Silva",
+        "data_nascimento": ,
+        "cpf": "10000000000",
+        "telefone": "31990000000",
+        "logradouro": "Rua Paulo de Oliveira Santos",
+        "numero": 554,
+        "bairro": "Tirol (Barreiro)",
+        "cidade": "Belo Horizonte-MG"
+    }
+}
+    - Erro (400): {
+    "code": 400,
+    "message": "Inválido"
+}
+
+
+
+
+
+
+Endpoint: Atualiza um paciente
+- Método: PUT
+- URL: pacientes/{id
+}
+- Parâmetros: 
+    - sem parâmetros
+- Corpo da requisição: {
+    "id": 1,
+    "nome": "Marcelo Fernando da Silva",
+    "data_nascimento": ,
+    "cpf": "10000000000",
+    "telefone": "31990000000",
+    "logradouro": "Rua Paulo de Oliveira Santos",
+    "numero": 554,
+    "bairro": "Tirol (Barreiro)",
+    "cidade": "Belo Horizonte"
+}
+- Resposta: 
+    -Sucesso (200): {
+    "code": 200,
+    "message": "Paciente atualizado com sucesso",
+    "data": {
+        "id": 1,
+        "nome": "Marcelo Fernando da Silva",
+        "data_nascimento": ,
+        "cpf": "10000000000",
+        "telefone": "31999000000",
+        "logradouro": "Rua Paulo de Oliveira Santos",
+        "numero": 212,
+        "bairro": "Tirol (Barreiro)",
+        "cidade": "Belo Horizonte-MG"
+    }
+}
+        - Erro (400): {
+    "code": 400,
+    "message": "ID inválido"
+}
+        - Erro (404): {
+    "code": 404,
+    "message": "Paciente não encontrado"
+}
+
+
+
+
+Endpoint: Exclui um paciente
+- Método: DELETE
+- URL: pacientes/{id
+}
+- Parâmetros: 
+    - id: {id
+} 
+- Resposta: 
+    -Sucesso (200): {
+    "code": 200,
+    "message": "Paciente excluido com sucesso",
+}
+    - Erro (404): {
+    "code": 404,
+    "message": "Paciente não encontrado",
+}
+
+
+
+
+
+
+
+
+Endpoint: Busca todos os pacientes
+- Método: GET
+- URL: pacientes/pacientes
+- Parâmetros:
+    - sem parâmetros
+- Resposta:
+    -Sucesso (200): {
+    "code": 200,
+    "message": "Paciente encontrado",
+    "data": {
+        "id": 1,
+        "nome": "Marcelo Fernando da Silva",
+        "data_nascimento": ,
+        "cpf": "10000000000",
+        "telefone": "31999000000",
+        "logradouro": "Rua Paulo de Oliveira Santos",
+        "numero": 212,
+        "bairro": "Tirol (Barreiro)",
+        "cidade": "Belo Horizonte-MG"
+    }
+}
+        - Erro (404): {
+    "code": 404,
+    "message": "Nenhum paciente encontrado",
+}
+
+
+
+
+
+
+
+Endpoint: Busca paciente por ID
+- Método: GET
+- URL: pacientes/id/{id
+}
+- Parâmetros: 
+    - id: {id
+}
+- Resposta: 
+    -Sucesso (200): {
+    "code": 200,
+    "message": "Paciente encontrado",
+    "data": {
+        "id": 1,
+        "nome": "Marcelo Fernando da Silva",
+        "data_nascimento": ,
+        "cpf": "10000000000",
+        "telefone": "31999000000",
+        "logradouro": "Rua Paulo de Oliveira Santos",
+        "numero": 212,
+        "bairro": "Tirol (Barreiro)",
+        "cidade": "Belo Horizonte-MG"
+    }
+}
+        - Erro (404): {
+    "code": 404,
+    "message": "Nenhum paciente encontrado",
+}
+
+
+
+
+Endpoint: Busca paciente por cpf
+- Método: GET
+- URL: pacientes/cpf/{cpf
+}
+- Parâmetros: 
+    - cpf: {cpf
+}
+- Resposta: 
+    -Sucesso (200): {
+    "code": 200,
+    "message": "Paciente encontrado",
+    "data": {
+        "id": 1,
+        "nome": "Marcelo Fernando da Silva",
+        "data_nascimento": ,
+        "cpf": "10000000000",
+        "telefone": "31999000000",
+        "logradouro": "Rua Paulo de Oliveira Santos",
+        "numero": 212,
+        "bairro": "Tirol (Barreiro)",
+        "cidade": "Belo Horizonte-MG"
+    }
+}
+    - Erro (404): {
+    "code": 404,
+    "message": "Nenhum paciente encontrado",
+}
+
+
+
+
+
+
+
+Endpoint: Cadastra novo horário
+- Método: POST
+- URL: horarios/
+- Parâmetros: 
+    - sem parâmetros
+- Corpo da requisição: {
+    "dia": "SEGUNDA",
+    "horario_inicio": "2024-04-21T15:03:39.395Z",
+    "horario_fim": "2024-04-21T15:03:39.395Z",
+    "id_medico": 1,
+}
+- Resposta: 
+    -Sucesso (201): {
+    "code": 201,
+    "message": "Horário cadastrado com sucesso",
+    "data": {
+        "dia": "SEGUNDA",
+        "horario_inicio": "2024-04-21T15:03:39.395Z",
+        "horario_fim": "2024-04-21T15:03:39.395Z",
+        "id_medico": 1,
+    }
+}
+        - Erro (400): {
+    "code": 400,
+    "message": "Inválido",
+}
+
+
+
+Endpoint: Atualiza horário
+- Método: PUT
+- URL: horarios/{id
+}
+- Parâmetros: 
+        - sem parâmetros
+- Corpo da requisição: {
+    "dia": "SEGUNDA",
+    "horario_inicio": "2024-04-21T15:03:39.395Z",
+    "horario_fim": "2024-04-21T15:03:39.395Z",
+    "id_medico": 1,
+}
+- Resposta: 
+    -Sucesso (200): {
+    "code": 200,
+    "message": "Horário atualizado com sucesso",
+    "data": {
+        "dia": "SEGUNDA",
+        "horario_inicio": "2024-04-21T15:03:39.395Z",
+        "horario_fim": "2024-04-21T15:03:39.395Z",
+        "id_medico": 1,
+    }
+}
+        - Erro (400): {
+    "code": 400,
+    "message": "Inválido",
+}
+        - Erro (404): {
+    "code": 404,
+    "message": "Horário não encontrado"
+}
+
+
+
+
+Endpoint: Exclui horário
+- Método: DELETE
+- URL: horarios/{id
+}
+- Parâmetros: 
+    - id: {id
+}
+- Resposta: 
+    -Sucesso (200): {
+    "code": 200,
+    "message": "Horário deletado",
+}
+        - Erro (404): {
+    "code": 404,
+    "message": "Horário não encontrado",
+}
+
+
+
+
+Endpoint: Busca horários
+- Método: GET
+- URL: horarios/
+- Parâmetros: 
+    - sem parâmetros 
+- Resposta: 
+    -Sucesso (200): {
+    "code": 200,
+    "message": "busca concluída",
+    "data": {
+        "dia": "SEGUNDA",
+        "horario_inicio": "2024-04-21T15:03:39.395Z",
+        "horario_fim": "2024-04-21T15:03:39.395Z",
+        "id_medico": 1,
+    }
+}
+
+
+
+
+
+
+
+
+Endpoint: Cadastrar prontuário
+- Método: POST
+- URL: prontuarios/
+- Parâmetros: 
+    - sem parâmetros 
+- Corpo da requisição: {
+    "id_consulta": 1,
+    "data_criacao": "2024-04-21T17:00:57.128Z",
+    "diagnostico": "diagnostico",
+    "exames": "exames",
+    "prescricoes": "pescrições",
+    "tratamentos": "tratamentos",
+    "observacoes": "observações",
+    "hash_medico": "string",
+}
+- Resposta: 
+    -Sucesso (201): {
+    "code": 201,
+    "message": "Prontuário cadastrado com sucesso",
+    "data": {
+        "id_consulta": 1,
+        "data_criacao": "2024-04-21T17:00:57.128Z",
+        "diagnostico": "diagnostico",
+        "exames": "exames",
+        "prescricoes": "pescrições",
+        "tratamentos": "tratamentos",
+        "observacoes": "observações",
+        "hash_medico": "string",
+    }
+}
+        - Erro (400): {
+    "code": 400,
+    "message": "Inválido",
+}
+
+
+
+
+Endpoint: Atualiza prontuário
+- Método: PUT
+- URL: prontuarios/
+- Parâmetros: 
+    - sem parâmetros 
+- Corpo da requisição: {
+    "id_consulta": 1,
+    "data_criacao": "2024-04-21T17:00:57.128Z",
+    "diagnostico": "diagnostico",
+    "exames": "exames",
+    "prescricoes": "pescrições",
+    "tratamentos": "tratamentos",
+    "observacoes": "observações",
+    "hash_medico": "string",
+}
+- Resposta: 
+    -Sucesso (201): {
+    "code": 201,
+    "message": "Prontuário cadastrado com sucesso",
+    "data": {
+        "id_consulta": 1,
+        "data_criacao": "2024-04-21T17:00:57.128Z",
+        "diagnostico": "diagnostico",
+        "exames": "exames",
+        "prescricoes": "pescrições",
+        "tratamentos": "tratamentos",
+        "observacoes": "observações",
+        "hash_medico": "string",
+    }
+}
+    - Erro (400): {
+    "code": 400,
+    "message": "Inválido",
+}
+    - Erro (404): {
+    "code": 404,
+    "message": "Prontuário não encontrado",
+}
+
+
+
+Endpoint: Exclui prontuário
+- Método: DELETE
+- URL: prontuarios/{id
+}
+- Parâmetros: 
+    - sem parâmetros 
+- Corpo da requisição: {
+    "id_consulta": 1,
+    "data_criacao": "2024-04-21T17:00:57.128Z",
+    "diagnostico": "diagnostico",
+    "exames": "exames",
+    "prescricoes": "pescrições",
+    "tratamentos": "tratamentos",
+    "observacoes": "observações",
+    "hash_medico": "string",
+}
+    - Resposta: 
+        -Sucesso (200): {
+    "code": 200,
+    "message": "Prontuário cadastrado com sucesso",
+    "data": {
+        "id_consulta": 1,
+        "data_criacao": "2024-04-21T17:00:57.128Z",
+        "diagnostico": "diagnostico",
+        "exames": "exames",
+        "prescricoes": "pescrições",
+        "tratamentos": "tratamentos",
+        "observacoes": "observações",
+        "hash_medico": "string",
+    }
+}
+        - Erro (404): {
+    "code": 404,
+    "message": "Prontuário não encontrado",
+}
+
+
+
+
+Endpoint: Busca todos prontuários
+- Método: GET
+- URL: prontuarios/{id
+}
+- Parâmetros: 
+    - sem parâmetros 
+    - Resposta: 
+        -Sucesso (200): {
+    "code": 200,
+    "message": "Lista prontuário",
+    "data": {
+        "id_consulta": 1,
+        "data_criacao": "2024-04-21T17:00:57.128Z",
+        "diagnostico": "diagnostico",
+        "exames": "exames",
+        "prescricoes": "pescrições",
+        "tratamentos": "tratamentos",
+        "observacoes": "observações",
+        "hash_medico": "string",
+    }
+}
+        - Erro (404): {
+    "code": 404,
+    "message": "Nenhum prontuário encontrado",
+}
+
+
+
+
+Endpoint: Busca prontuário por ID
+- Método: GET
+- URL: prontuarios/id/{id}
+- Parâmetros: 
+    - id: {id}
+    - Resposta: 
+        -Sucesso (200): {
+    "code": 200,
+    "message": "Lista prontuário",
+    "data": {
+        "id_consulta": 1,
+        "data_criacao": "2024-04-21T17:00:57.128Z",
+        "diagnostico": "diagnostico",
+        "exames": "exames",
+        "prescricoes": "pescrições",
+        "tratamentos": "tratamentos",
+        "observacoes": "observações",
+        "hash_medico": "string",
+    }
+}
+    - Erro (404): {
+    "code": 404,
+    "message": "Nenhum prontuário encontrado",
+}
+
+
+
+Endpoint: Busca prontuário por médico
+- Método: GET
+- URL: prontuarios/medico/{idmedico}
+- Parâmetros: 
+    - id: {idmedico}
+    - Resposta: 
+        -Sucesso (200): {
+    "code": 200,
+    "message": "Lista prontuário",
+    "data": {
+        "id_consulta": 1,
+        "data_criacao": "2024-04-21T17:00:57.128Z",
+        "diagnostico": "diagnostico",
+        "exames": "exames",
+        "prescricoes": "pescrições",
+        "tratamentos": "tratamentos",
+        "observacoes": "observações",
+        "hash_medico": "string",
+    }
+}
+    - Erro (404): {
+    "code": 404,
+    "message": "Nenhum prontuário encontrado",
+}
+
+
+
+Endpoint: Busca prontuário por paciente
+- Método: GET
+- URL: prontuarios/paciente/{idpaciente}
+- Parâmetros: 
+    - id: {idpaciente}
+    - Resposta: 
+        -Sucesso (200): {
+    "code": 200,
+    "message": "Lista prontuário",
+    "data": {
+        "id_consulta": 1,
+        "data_criacao": "2024-04-21T17:00:57.128Z",
+        "diagnostico": "diagnostico",
+        "exames": "exames",
+        "prescricoes": "pescrições",
+        "tratamentos": "tratamentos",
+        "observacoes": "observações",
+        "hash_medico": "string",
+    }
+}
+    - Erro (404): {
+    "code": 404,
+    "message": "Nenhum prontuário encontrado",
+}
+
+
+
+
+
